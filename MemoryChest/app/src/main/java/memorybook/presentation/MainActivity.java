@@ -1,9 +1,11 @@
-package com.group4.comp3350.memorybook;
+package memorybook.presentation;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.group4.comp3350.presentation.R;
 
 
 public class MainActivity extends Activity {
