@@ -1,3 +1,9 @@
+2/2016 - Bennet
+I will tackle creating the Stub Database
+
+2/2/2016 - Chad
+I will tackle creating the Memory Data Structure
+
 2/2/2016 - Bennet
 
 For iteration 1 we have 3 Big User stories to complete:
