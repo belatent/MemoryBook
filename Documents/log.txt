@@ -1,4 +1,8 @@
-2/2016 - Bennet
+2/2/2016 - Bennet
+Finished Stub Database Implementation (1/2 day)
+- Unit testing still required 
+
+2/2/2016 - Bennet
 I will tackle creating the Stub Database
 
 2/2/2016 - Chad
