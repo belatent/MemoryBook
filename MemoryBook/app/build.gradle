@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "com.group4.comp3350.memorybook.presentation"
+        applicationId "com.group4.comp3350.memorybook"
         minSdkVersion 21
         targetSdkVersion 22
         versionCode 1
