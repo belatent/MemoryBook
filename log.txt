@@ -1,0 +1,6 @@
+2/1/2016 - Bennet
+- Created Log File 
+- Discussed with Chad how to best implement Persistence layer for Stub Database.
+- Decided to have a generic database class for standard ops(query,insert,delete)
+ with a specialized class for app specific retrievals, both with appropriate interfaces.
+
