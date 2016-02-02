@@ -1,29 +1,24 @@
 package com.group4.comp3350.memorybook.presentation;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.group4.comp3350.memorybook.R;
 
+public class NewMemoryActivity extends Activity {
 
-public class MainActivity extends Activity {
-
-    private final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_new_memory);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_new_memory, menu);
         return true;
     }
 
@@ -40,13 +35,5 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    /** Called when the user clicks the Add Memory button */
-    public void addMemoryButtonPressed(View view) {
-        // open the new memory activity screen
-        Log.v(TAG, "Add Memory Button was Pressed!");
-        Intent intent = new Intent(this, NewMemoryActivity.class);
-        startActivity(intent);
     }
 }

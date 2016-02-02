@@ -1,4 +1,8 @@
 2/2/2016 - Bennet
+Implemented an 'Add New Memory' button that opens a new activity. (1/2 day).
+- Unit testing still required
+
+2/2/2016 - Bennet
 Finished Stub Database Implementation (1/2 day)
 - Unit testing still required 
 
