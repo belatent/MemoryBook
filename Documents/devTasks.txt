@@ -1,0 +1,46 @@
+For iteration 1 we have 3 Big User stories to complete:
+
+-Add a memory
+-View a memory
+-Search through memories
+
+Breakdown and developer tasks:
+
+Add a Memory
+•	Add Title to Memory	
+•	Add Description to Memory	
+•	Add Photo to Memory	
+•	Add Location to Memory	
+•	Add Mood to Memory	
+•	Add Tags to Memory	
+Developer Tasks:
+•	Create Add Memory Button that opens new screen - DONE (UNIT TESTING REQUIRED)
+•	Create screen for entering details into memory   
+	o	Title, Desc, Location, Tags -(Text input)
+	o	Mood                        -(Drop down menu with emoticons)
+	o	Photo                       -(Open camera to take photo)
+	o	“Save” Memory button 
+•	Create Stub Database - DONE (UNIT TESTING REQUIRED)
+•	Create Memory Data structure
+
+View a Memory	
+•	View Title of a Memory
+•	View Description of a Memory	
+•	View Photo of a Memory	
+•	View Location of a Memory	
+•	View Mood of a Memory	
+•	View Tags on a Memory	
+Developer Tasks:
+•	Create view memories button that opens new screen
+•	Create screen that shows list of all memories that when a memory is clicked opens new screen:
+•	Create screen for viewing a particular memory that shows:
+	o	Title, Desc, Location, Tags, Mood, Photo
+
+Search through Memories	
+•	View All Memories	
+•	Search Memories by Tag	
+•	Search Memories by Location	
+•	Search Memories by Location	
+Developer Tasks: 
+•	Add search bar to screen that shows list of memories and filters the list
+
