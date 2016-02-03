@@ -15,6 +15,7 @@ public interface MemoryRepository {
      * @throws - PersistenceException if error occurs
      */
     public ArrayList<Memory> getAllMemories() throws PersistenceException;
+
     /**
      * storeMemory
      * @param memory the Memory to be stored in database
@@ -22,6 +23,7 @@ public interface MemoryRepository {
      * @throws - PersistenceException if error occurs
      */
     public Memory storeMemory(Memory memory) throws PersistenceException;
+
     /**
      * deleteMemory
      * @param memoryToDelete the to be deleted

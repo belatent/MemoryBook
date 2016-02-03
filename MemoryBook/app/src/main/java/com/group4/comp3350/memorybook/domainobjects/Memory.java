@@ -8,7 +8,7 @@ import java.util.Set;
  */
 public class Memory {
 
-    private long id;
+    private long id = -1;
     private String title;
     private String description; // summary of memory/event
     private Set<Mood> moods;
@@ -41,7 +41,7 @@ public class Memory {
     }
 
     public Set<Mood> getMoods() {
-        return moods;
+        return new HashSet<Mood>(moods);
     }
 
     public String getTitle() {
@@ -49,8 +49,6 @@ public class Memory {
     }
 
     public void setTitle(String title) {
-        // TODO: max length?
-
         this.title = title;
     }
 
@@ -59,8 +57,6 @@ public class Memory {
     }
 
     public void setDescription(String description) {
-        // TODO: max length?
-
         this.description = description;
     }
 }

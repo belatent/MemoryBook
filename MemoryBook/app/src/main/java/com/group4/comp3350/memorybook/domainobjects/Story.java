@@ -10,10 +10,12 @@ import java.util.List;
 public class Story {
     private long id = -1;
     private String title;
+    private String description; // summary of story/events
     private HashMap<Long, Memory> memories;
 
-    public Story(String title) {
+    public Story(String title, String description) {
         this.title = title;
+        this.description = description;
         this.memories = new HashMap<Long, Memory>();
     }
 
@@ -35,5 +37,21 @@ public class Story {
 
     public List<Memory> getMemories() {
         return new ArrayList<Memory>(memories.values());
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
