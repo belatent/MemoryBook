@@ -2,24 +2,22 @@ package com.group4.comp3350.memorybook.domainobjects;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Chad on 2/2/2016.
  */
 public class Story {
-    private int id = -1;
+    private long id = -1;
     private String title;
-    private HashMap<Integer, Memory> memories;
+    private HashMap<Long, Memory> memories;
 
     public Story(String title) {
         this.title = title;
-        this.memories = new HashMap<Integer, Memory>();
+        this.memories = new HashMap<Long, Memory>();
     }
 
-    public int getId() {
+    public long getId() {
         return this.id;
     }
 

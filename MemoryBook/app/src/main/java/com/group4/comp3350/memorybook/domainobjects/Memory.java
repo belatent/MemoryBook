@@ -5,14 +5,14 @@ package com.group4.comp3350.memorybook.domainobjects;
  */
 public class Memory {
 
-    private int id;
+    private long id;
     private String title;
 
     public Memory(String title) {
         this.title = title;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
