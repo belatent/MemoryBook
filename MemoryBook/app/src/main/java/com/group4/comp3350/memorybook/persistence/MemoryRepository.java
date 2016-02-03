@@ -8,16 +8,10 @@ import java.util.ArrayList;
 /**
  * Created by Bennet on 2/2/2016.
  */
-public interface MemoryBookDatabaseInterface {
+public interface MemoryRepository {
 
     public ArrayList<Memory> getAllMemories();
     public long addMemory(Memory newMemory);
-    public int deleteMemory(long memoryId);
-
-
-    public ArrayList<Story> getAllStories();
-    public long addStory(Story newStory);
-    public int updateStory(long storyId, Story updatedStory);
-    public int deleteStory(long storyId);
+    public int deleteMemory(Memory memoryToDelete);
 
 }
