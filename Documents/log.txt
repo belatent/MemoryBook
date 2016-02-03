@@ -1,3 +1,6 @@
+2/2/2016 - Chad
+Added methods to our Memory and Story domain objects
+
 2/2/2016 - Bennet
 Implemented an 'Add New Memory' button that opens a new activity. (1/2 day).
 - Unit testing still required
