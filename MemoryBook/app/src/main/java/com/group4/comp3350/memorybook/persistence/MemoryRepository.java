@@ -10,8 +10,24 @@ import java.util.ArrayList;
  */
 public interface MemoryRepository {
 
-    public ArrayList<Memory> getAllMemories();
-    public long addMemory(Memory newMemory);
-    public int deleteMemory(Memory memoryToDelete);
+    /**
+     * getAllMemories
+     * @returns an ArrayList of Memories
+     * @throws - PersistenceException if error occurs
+     */
+    public ArrayList<Memory> getAllMemories() throws PersistenceException;
+    /**
+     * storeMemory
+     * @param memory the Memory to be stored in database
+     * @return - returns memory with id field set
+     * @throws - PersistenceException if error occurs
+     */
+    public Memory storeMemory(Memory memory) throws PersistenceException;
+    /**
+     * deleteMemory
+     * @param memoryToDelete the to be deleted
+     * @throws - PersistenceException if error occurs
+     */
+    public void deleteMemory(Memory memoryToDelete) throws PersistenceException;
 
 }

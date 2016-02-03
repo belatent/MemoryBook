@@ -22,71 +22,44 @@ public class StubStoryRepository implements StoryRepository{
     }
 
     /**
-     * getAllStories
-     * @return - returns an ArrayList of all Stories
+     * {@inheritDoc}
      */
     @Override
-    public ArrayList<Story> getAllStories(){
+    public ArrayList<Story> getAllStories() throws PersistenceException{
         return new ArrayList<Story>(storyTable.values());
     }
 
     /**
-     * addStory
-     * @param newStory the new Story to be added
-     * @return - returns storyId of the new Story, -1 if error occurred
+     * {@inheritDoc}
      */
     @Override
-    public long addStory(Story newStory) {
-        long rc = -1;
+    public Story storeStory(Story story) throws PersistenceException{
         try {
-            storyTable.put(storyIdCount, newStory);
+            story.setId(storyIdCount);
+            storyTable.put(storyIdCount, story);
             storyIdCount++;
-            rc = storyIdCount;
         } catch (NullPointerException e){
-            Log.v(TAG, "Failed to Add Story");
+            Log.v(TAG, "Failed to Store Story");
+            throw new PersistenceException("Failed to Store Story, NullPointer");
         }
-        return rc;
+        return story;
     }
 
     /**
-     * updateStory
-     * @param updatedStory the updated version of the Story
-     * @return - returns number of stories updated
+     * {@inheritDoc}
      */
     @Override
-    public int updateStory(Story updatedStory)  {
-        int rc = 0;
-        try {
-            if(storyTable.contains(updatedStory.getId())){
-                storyTable.put(updatedStory.getId(), updatedStory);
-                rc = 1;
-            } else {
-                Log.v(TAG, "Story not found");
-            }
-        } catch (NullPointerException e){
-            Log.v(TAG, "Failed to Update Story");
-        }
-        return rc;
-    }
-
-    /**
-     * deleteStory
-     * @param storyToDelete the story to be deleted
-     * @return - returns number of stories deleted
-     */
-    @Override
-    public int deleteStory(Story storyToDelete){
-        int rc = 0;
+    public void deleteStory(Story storyToDelete) throws PersistenceException{
         try {
             if(storyTable.contains(storyToDelete.getId())){
                 storyTable.remove(storyToDelete.getId());
-                rc = 1;
             } else {
                 Log.v(TAG, "Story not found");
+                throw new PersistenceException("Failed to Store Story, Story not found");
             }
         } catch (NullPointerException e){
             Log.v(TAG, "Failed to Delete Story");
+            throw new PersistenceException("Failed to Delete Story, NullPointer");
         }
-        return rc;
     }
 }

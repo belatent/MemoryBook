@@ -25,51 +25,45 @@ public class StubMemoryRepository implements MemoryRepository {
     }
 
     /**
-     * getAllMemories
-     * @returns an ArrayList of Memories
+     * {@inheritDoc}
      */
     @Override
-    public ArrayList<Memory> getAllMemories()  {
+    public ArrayList<Memory> getAllMemories() throws PersistenceException{
         return new ArrayList<Memory>(memoryTable.values());
     }
-
     /**
-     * addMemory
-     * @param newMemory the new Memory to be added
-     * @return - returns the memoryId of the new Memory, -1 if error occurred
+     * {@inheritDoc}
      */
+
     @Override
-    public long addMemory(Memory newMemory) {
-        long rc = -1;
+    public Memory storeMemory(Memory memory) throws PersistenceException{
         try {
-            memoryTable.put(memoryIdCount, newMemory);
+            memory.setId(memoryIdCount);
+            memoryTable.put(memoryIdCount, memory);
             memoryIdCount++;
-            rc = memoryIdCount;
         } catch (NullPointerException e){
             Log.v(TAG, "Failed to Add Memory");
+            throw new PersistenceException("Failed to Delete Memory, Memory not found");
         }
-        return rc;
+        return memory;
     }
 
     /**
-     * deleteMemory
-     * @param memoryToDelete the to be deleted
-     * @return - returns the number of memories deleted
+     * {@inheritDoc}
      */
     @Override
-    public int deleteMemory(Memory memoryToDelete) {
-        int rc = 0;
+    public void deleteMemory(Memory memoryToDelete) throws PersistenceException{
         try {
             if(memoryTable.contains(memoryToDelete.getId())){
                 memoryTable.remove(memoryToDelete.getId());
-                rc = 1;
             } else {
                 Log.v(TAG, "Memory not found");
+                throw new PersistenceException("Failed to Delete Memory, Memory not found");
             }
         } catch (NullPointerException e){
             Log.v(TAG, "Failed to Delete Memory");
+            throw new PersistenceException("Failed to Delete Memory, NullPointer");
         }
-        return rc;
     }
 
 
