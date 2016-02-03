@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by Bennet on 2/2/2016.
+ * Created by Chad on 2/2/2016.
  */
 public class Story {
     private int id = -1;
