@@ -1,6 +1,6 @@
 package com.group4.comp3350.memorybook.persistence;
 
-import com.group4.comp3350.memorybook.domain.entities.Memory;
+import com.group4.comp3350.memorybook.domainobjects.Memory;
 
 import java.util.ArrayList;
 

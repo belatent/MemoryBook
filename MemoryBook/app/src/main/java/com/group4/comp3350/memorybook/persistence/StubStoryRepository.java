@@ -2,7 +2,7 @@ package com.group4.comp3350.memorybook.persistence;
 
 import android.util.Log;
 
-import com.group4.comp3350.memorybook.domain.entities.Story;
+import com.group4.comp3350.memorybook.domainobjects.Story;
 
 import java.util.ArrayList;
 import java.util.Hashtable;

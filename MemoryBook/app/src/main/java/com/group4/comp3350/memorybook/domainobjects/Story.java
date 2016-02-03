@@ -1,4 +1,4 @@
-package com.group4.comp3350.memorybook.domain.entities;
+package com.group4.comp3350.memorybook.domainobjects;
 
 import java.util.ArrayList;
 import java.util.HashMap;
