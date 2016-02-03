@@ -1,3 +1,6 @@
+2/3/2016 - Litao
+I will create Add Memory Button that opens new screen
+
 2/2/2016 - Jessica
 I will tackle creating the screen for entering details into memory
 
@@ -18,42 +21,42 @@ For iteration 1 we have 3 Big User stories to complete:
 Breakdown and developer tasks:
 
 Add a Memory
-ï	Add Title to Memory	
-ï	Add Description to Memory	
-ï	Add Photo to Memory	
-ï	Add Location to Memory	
-ï	Add Mood to Memory	
-ï	Add Tags to Memory	
+‚Ä¢	Add Title to Memory	
+‚Ä¢	Add Description to Memory	
+‚Ä¢	Add Photo to Memory	
+‚Ä¢	Add Location to Memory	
+‚Ä¢	Add Mood to Memory	
+‚Ä¢	Add Tags to Memory	
 Developer Tasks:
-ï	Create Add Memory Button that opens new screen
-ï	Create screen for entering details into memory
+‚Ä¢	Create Add Memory Button that opens new screen
+‚Ä¢	Create screen for entering details into memory
 	o	Title, Desc, Location, Tags -(Text input)
 	o	Mood                        -(Drop down menu with emoticons)
 	o	Photo                       -(Open camera to take photo)
-	o	ìSaveî Memory button
-ï	Create Stub Database
-ï	Create Memory Data structure
+	o	‚ÄúSave‚Äù Memory button
+‚Ä¢	Create Stub Database
+‚Ä¢	Create Memory Data structure
 
 View a Memory	
-ï	View Title of a Memory
-ï	View Description of a Memory	
-ï	View Photo of a Memory	
-ï	View Location of a Memory	
-ï	View Mood of a Memory	
-ï	View Tags on a Memory	
+‚Ä¢	View Title of a Memory
+‚Ä¢	View Description of a Memory	
+‚Ä¢	View Photo of a Memory	
+‚Ä¢	View Location of a Memory	
+‚Ä¢	View Mood of a Memory	
+‚Ä¢	View Tags on a Memory	
 Developer Tasks:
-ï	Create view memories button that opens new screen
-ï	Create screen that shows list of all memories that when a memory is clicked opens new screen:
-ï	Create screen for viewing a particular memory that shows:
+‚Ä¢	Create view memories button that opens new screen
+‚Ä¢	Create screen that shows list of all memories that when a memory is clicked opens new screen:
+‚Ä¢	Create screen for viewing a particular memory that shows:
 	o	Title, Desc, Location, Tags, Mood, Photo
 
 Search through Memories	
-ï	View All Memories	
-ï	Search Memories by Tag	
-ï	Search Memories by Location	
-ï	Search Memories by Location	
+‚Ä¢	View All Memories	
+‚Ä¢	Search Memories by Tag	
+‚Ä¢	Search Memories by Location	
+‚Ä¢	Search Memories by Location	
 Developer Tasks: 
-ï	Add search bar to screen that shows list of memories and filters the list
+‚Ä¢	Add search bar to screen that shows list of memories and filters the list
 
 
 
