@@ -1,3 +1,6 @@
+2/2/2016 - Jessica
+I will tackle creating the screen for entering details into memory
+
 2/2016 - Bennet
 I will tackle creating the Stub Database
 
