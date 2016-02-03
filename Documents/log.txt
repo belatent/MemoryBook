@@ -1,3 +1,6 @@
+2/2/2016 - Bennet
+Refactored Stub Database Implementation into Memory and Story Repositories after discussion with Chad.
+
 2/2/2016 - Chad
 Added methods to our Memory and Story domain objects
 
