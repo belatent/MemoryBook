@@ -1,4 +1,4 @@
-package com.group4.comp3350.memorybook.domainobjects;
+package com.group4.comp3350.memorybook.domain.entities;
 
 /**
  * Created by Bennet on 2/2/2016.
