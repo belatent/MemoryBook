@@ -53,7 +53,7 @@ View a Memory
 •	View Mood of a Memory	
 •	View Tags on a Memory	
 Developer Tasks:
-•	Create view memories button that opens new screen
+•	Create view memories button that opens new screen  - DONE (Needs Unit Testing)
 •	Create screen that shows list of all memories that when a memory is clicked opens new screen:
 •	Create screen for viewing a particular memory that shows:
 	o	Title, Desc, Location, Tags, Mood, Photo
