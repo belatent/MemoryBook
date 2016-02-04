@@ -11,20 +11,20 @@ public interface StoryRepository {
     /**
      * getAllStories
      * @return - returns an ArrayList of all Stories
-     * @throws - PersistenceException if error occurs
+     * @throws - PersistenceException if error occurs and NullPointerException if argument is null
      */
     public ArrayList<Story> getAllStories() throws PersistenceException;
     /**
      * addStory
      * @param story the Story to be stored
      * @return - returns story with id field set
-     * @throws - PersistenceException if error occurs
+     * @throws - PersistenceException if error occurs and NullPointerException if argument is null
      */
     public Story storeStory(Story story) throws PersistenceException;
     /**
      * deleteStory
      * @param storyToDelete the story to be deleted
-     * @throws - PersistenceException if error occurs
+     * @throws - PersistenceException if error occurs and NullPointerException if argument is null
      */
     public void deleteStory(Story storyToDelete) throws PersistenceException;
 }
