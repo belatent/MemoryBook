@@ -34,13 +34,18 @@ public class StubStoryRepository implements StoryRepository{
      */
     @Override
     public Story storeStory(Story story) throws PersistenceException{
-        try {
-            story.setId(storyIdCount);
-            storyTable.put(storyIdCount, story);
-            storyIdCount++;
-        } catch (NullPointerException e){
-            Log.v(TAG, "Failed to Store Story");
-            throw new PersistenceException("Failed to Store Story, NullPointer");
+        if(story != null){
+            if(story.getId() != -1){
+                // we are updating an existing story
+                storyTable.put(storyIdCount, story);
+            } else {
+                // we are saving a new story
+                story.setId(storyIdCount);
+                storyTable.put(storyIdCount, story);
+                storyIdCount++;
+            }
+        } else {
+            throw new NullPointerException();
         }
         return story;
     }
@@ -50,16 +55,15 @@ public class StubStoryRepository implements StoryRepository{
      */
     @Override
     public void deleteStory(Story storyToDelete) throws PersistenceException{
-        try {
+        if(storyToDelete != null){
             if(storyTable.contains(storyToDelete.getId())){
                 storyTable.remove(storyToDelete.getId());
             } else {
                 Log.v(TAG, "Story not found");
                 throw new PersistenceException("Failed to Store Story, Story not found");
             }
-        } catch (NullPointerException e){
-            Log.v(TAG, "Failed to Delete Story");
-            throw new PersistenceException("Failed to Delete Story, NullPointer");
+        } else {
+            throw new NullPointerException();
         }
     }
 }

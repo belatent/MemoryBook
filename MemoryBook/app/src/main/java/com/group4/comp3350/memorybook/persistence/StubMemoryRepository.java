@@ -36,13 +36,18 @@ public class StubMemoryRepository implements MemoryRepository {
 
     @Override
     public Memory storeMemory(Memory memory) throws PersistenceException{
-        try {
-            memory.setId(memoryIdCount);
-            memoryTable.put(memoryIdCount, memory);
-            memoryIdCount++;
-        } catch (NullPointerException e){
-            Log.v(TAG, "Failed to Add Memory");
-            throw new PersistenceException("Failed to Delete Memory, Memory not found");
+        if(memory != null){
+            if(memory.getId() != -1){
+                // then we are updating an existing memory
+                memoryTable.put(memoryIdCount, memory);
+            } else {
+                // then we are storing a new memory
+                memory.setId(memoryIdCount);
+                memoryTable.put(memoryIdCount, memory);
+                memoryIdCount++;
+            }
+        } else {
+            throw new NullPointerException();
         }
         return memory;
     }
@@ -52,16 +57,15 @@ public class StubMemoryRepository implements MemoryRepository {
      */
     @Override
     public void deleteMemory(Memory memoryToDelete) throws PersistenceException{
-        try {
+        if(memoryToDelete != null){
             if(memoryTable.contains(memoryToDelete.getId())){
                 memoryTable.remove(memoryToDelete.getId());
             } else {
                 Log.v(TAG, "Memory not found");
                 throw new PersistenceException("Failed to Delete Memory, Memory not found");
             }
-        } catch (NullPointerException e){
-            Log.v(TAG, "Failed to Delete Memory");
-            throw new PersistenceException("Failed to Delete Memory, NullPointer");
+        } else {
+            throw new NullPointerException();
         }
     }
 
