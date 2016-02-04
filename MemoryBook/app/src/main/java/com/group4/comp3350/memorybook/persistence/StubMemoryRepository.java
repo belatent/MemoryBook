@@ -58,7 +58,7 @@ public class StubMemoryRepository implements MemoryRepository {
     @Override
     public void deleteMemory(Memory memoryToDelete) throws PersistenceException{
         if(memoryToDelete != null){
-            if(memoryTable.contains(memoryToDelete.getId())){
+            if(memoryTable.containsKey(memoryToDelete.getId())){
                 memoryTable.remove(memoryToDelete.getId());
             } else {
                 Log.v(TAG, "Memory not found");

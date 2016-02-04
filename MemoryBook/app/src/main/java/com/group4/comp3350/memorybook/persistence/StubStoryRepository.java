@@ -56,7 +56,7 @@ public class StubStoryRepository implements StoryRepository{
     @Override
     public void deleteStory(Story storyToDelete) throws PersistenceException{
         if(storyToDelete != null){
-            if(storyTable.contains(storyToDelete.getId())){
+            if(storyTable.containsKey(storyToDelete.getId())){
                 storyTable.remove(storyToDelete.getId());
             } else {
                 Log.v(TAG, "Story not found");
